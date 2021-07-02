@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/more-data-source.iml" filepath="$PROJECT_DIR$/.idea/more-data-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-dynamic/mybatis-dynamic.iml" filepath="$PROJECT_DIR$/mybatis-dynamic/mybatis-dynamic.iml" />
     </modules>
   </component>
 </project>
