@@ -1,4 +1,4 @@
-src: mybatisd-ynamic
+src: mybatis-dynamic
 author: Wei
 pack:
   parent: com.mybatisdynamic #这里每次注意修改位置
