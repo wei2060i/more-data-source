@@ -6,13 +6,27 @@ spring:
     name: dynamic-config
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 3
+      idle-timeout: 10000
+      max-lifetime: 1800000
+      connection-timeout: 500
+      login-timeout: 500
+      validation-timeout: 1000
+      initialization-fail-timeout: 1000
+      connection-test-query: select 1
     dynamic:
       primary: master #设置默认的数据源或者数据源组,默认值即为master
       strict: false #严格匹配数据源,默认false.true未匹配到指定数据源时抛异常,false使用默认数据源
       datasource:
           master:
-            url: jdbc:mysql://127.0.0.1:3306/data_management?serverTimezone=UTC
+            url: jdbc:mysql://127.0.0.1:3306/more_datasource1?characterEncoding=utf8&serverTimezone=Hongkong&useSSL=false&allowPublicKeyRetrieval=true
             username: root
             password: 123456
-
+          write:
+            url: jdbc:mysql://127.0.0.1:3306/more_datasource2?characterEncoding=utf8&serverTimezone=Hongkong&useSSL=false&allowPublicKeyRetrieval=true
+            username: root
+            password: 123456
 
